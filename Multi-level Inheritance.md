@@ -1,12 +1,8 @@
 # Exp.No:24  
 ## Multi-level Inheritance
 
----
-
 ### AIM  
 To write a Python program to get the name, age, and ID of a person and display them using multilevel inheritance.
-
----
 
 ### ALGORITHM
 
@@ -34,15 +30,38 @@ To write a Python program to get the name, age, and ID of a person and display t
 
 8. Terminate the program.
 
----
 
 ### PROGRAM
 
 ```
+# Reg.No-212223050048
+# Name-SIBIRAJI M
+# Write your code here
+class Person:
+    def __init__(self,name):
+        self.name=name
+class Employee(Person):
+    def __init__(self,name,age):
+        super().__init__(name)
+        self.age=age
+class Id(Employee):
+    def __init__(self,name,age,id):
+        super().__init__(name,age)
+        self.id=id
+    def display(self):
+        print(f"{self.name} {self.age} {self.id}")
 
-
+def main():
+    name=input()
+    age=int(input())
+    id=int(input())
+    person=Id(name,age,id)
+    person.display()
+main()
 ```
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/73f8428e-e025-46f8-b349-ebb4113757dd)
 
 ### RESULT
+Thus the Python program to get the name, age, and ID of a person and display them using multilevel inheritance. is executed successfully.
